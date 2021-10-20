@@ -42,8 +42,3 @@ start - Check Bot Alive or Not
 request - Search Videos
 ```
 
-## Host Bot
-### Deploy to Heroku
-Click Below Button to Deploy to Heroku:
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Bhatmanjusms/pdisk-search-bot)
