@@ -51,15 +51,15 @@ PDiskBot = Client(
 
 @PDiskBot.on_message(filters.command("start") & ~filters.edited)
 async def start_handler(_, m: Message):
-    await m.reply_text("Hi, I am Alive!\n\nSearch using /request command.", quote=True)
+    await m.reply_text("Hi, I am Alive!\n\njust send movie name to search.", quote=True)
 
 
 @PDiskBot.on_message(filters.text & ~filters.edited, group=-1)
 async def text_handler(_, m: Message):
 
 
-    editable = await m.reply_text("Please Wait ...", quote=True)
-    response = await search_pdisk_videos(m.text Configs.PDISK_USERNAME, Configs.PDISK_PASSWORD)
+    editable = await m.reply_text("Hmm.. searching your Request", quote=True)
+    response = await search_pdisk_videos(m.text,Configs.PDISK_USERNAME, Configs.PDISK_PASSWORD)
     if isinstance(response, Exception):
         traceback.print_exc()
         try: await editable.edit("Failed to search!",
@@ -68,7 +68,7 @@ async def text_handler(_, m: Message):
                                  ]))
         except MessageNotModified: pass
     elif not response["data"]["list"]:
-        try: await editable.edit("Not Found!")
+        try: await editable.edit("No Results Found Check Spelling On Google first if spelling is correct then use #request when admins free they will upload")
         except MessageNotModified: pass
     else:
         data = response["data"]["list"]
@@ -79,7 +79,6 @@ async def text_handler(_, m: Message):
                 break
             count += 1
             text += f"**Title:** `{data[i]['title']}`\n" \
-                    f"**Description:** `{data[i]['description']}`\n" \
                     f"**PDisk Link:** {Configs.PDISK_DOMAIN + 'share-video?videoid=' + data[i]['share_link'].split('=', 1)[-1]}\n\n"
         try: await editable.edit(text, disable_web_page_preview=True)
         except MessageNotModified: pass
