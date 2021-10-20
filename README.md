@@ -1,5 +1,5 @@
 # PDisk-Videos-Search
-A Telegram bot for searching videos in your PDisk account by [@AbirHasan2005](https://t.me/AbirHasan2005).
+A Telegram bot for searching videos in your PDisk account.
 
 ### Configs
 - `API_ID` - Get from [@TeleORG_Bot](https://t.me/TeleORG_Bot)
@@ -20,7 +20,7 @@ request - Search Videos
 ### Deploy to Heroku
 Click Below Button to Deploy to Heroku:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AbirHasan2005/PDisk-Videos-Search)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Bhatmanjusms/pdisk-search-bot)
 
 ```
 
@@ -46,4 +46,4 @@ request - Search Videos
 ### Deploy to Heroku
 Click Below Button to Deploy to Heroku:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AbirHasan2005/PDisk-Videos-Search)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Bhatmanjusms/pdisk-search-bot)
